@@ -1,0 +1,39 @@
+{
+  "name": "casa",
+  "version": "0.0.1",
+  "description": "Yet another static site generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnotander/casa.git"
+  },
+  "keywords": [
+    "static",
+    "site",
+    "generator",
+    "html",
+    "markdown",
+    "css",
+    "cssnext"
+  ],
+  "author": "John Otander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/casa/issues"
+  },
+  "homepage": "https://github.com/johnotander/casa#readme",
+  "dependencies": {
+    "clean-css": "^3.3.9",
+    "cssnext": "^1.8.4",
+    "glob": "^5.0.14",
+    "humanize-string": "^1.0.1",
+    "is-blank": "0.0.1",
+    "is-present": "0.0.1",
+    "json-front-matter": "^1.0.0",
+    "lodash": "^3.10.1",
+    "marked": "^0.3.5"
+  }
+}
