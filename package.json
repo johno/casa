@@ -4,7 +4,7 @@
   "description": "Yet another static site generator",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "node test/index.js | tap-dot"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "object-merge": "^2.5.1"
   },
   "devDependencies": {
+    "tap-dot": "^1.0.0",
     "tape": "^4.2.0"
   }
 }

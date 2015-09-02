@@ -2,6 +2,7 @@ var fs = require('fs')
 var test = require('tape')
 
 var renderPage = require('../lib/render-page')
+var readTemplate = require('../lib/read-template')
 var renderTemplate = require('../lib/render-template')
 
 test('page render', function (t) {
@@ -13,11 +14,20 @@ test('page render', function (t) {
   t.equal(testPage, expected)
 })
 
-test('template render', function(t) {
+test('template render', function (t) {
   t.plan(1)
 
   var template = fs.readFileSync('test/templates/nested-template.html', 'utf8')
   var renderedTemplate = renderTemplate({ content: template })
   var expected = fs.readFileSync('test/templates/nested-template.expected.html', 'utf8')
   t.equal(renderedTemplate, expected)
+})
+
+test('read template', function (t) {
+  t.plan(2)
+
+  var expected = '{{{\n  "template": "nested-nested-template",\n  "foobar": "Some string thing"\n}}}\n<div class="awesome-nested-template"></div>\n'
+
+  t.doesNotThrow(readTemplate)
+  t.equal(readTemplate('nested-template'), expected)
 })
