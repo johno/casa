@@ -16,7 +16,8 @@ test('page render', function (t) {
 test('template render', function(t) {
   t.plan(1)
 
-  var renderedTemplate = renderTemplate('test/templates/nested-template.html')
+  var template = fs.readFileSync('test/templates/nested-template.html', 'utf8')
+  var renderedTemplate = renderTemplate({ content: template })
   var expected = fs.readFileSync('test/templates/nested-template.expected.html', 'utf8')
   t.equal(renderedTemplate, expected)
 })
