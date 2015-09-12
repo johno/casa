@@ -3,7 +3,7 @@
 _Work in progress._
 
 Yet another static site generator.
-Casa is a minimal, opinionated site generator that leverages lodash and folder conventions to ensure it is as lightweight as possible.
+Casa is a minimal, opinionated site generator that leverages lodash and folder conventions to ensure it's as lightweight as possible.
 
 ## Installation
 

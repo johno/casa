@@ -14,6 +14,15 @@ test('page render', function (t) {
   t.equal(testPage, expected)
 })
 
+test('markdown page render', function (t) {
+  t.plan(1)
+
+  renderPage('test/pages/foobar.md')
+  var testPage = fs.readFileSync('test/foobar/index.html', 'utf8')
+  var expected = fs.readFileSync('test/foobar/index.expected.html', 'utf8')
+  t.equal(testPage, expected)
+})
+
 test('template render', function (t) {
   t.plan(1)
 
