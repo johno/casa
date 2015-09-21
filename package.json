@@ -40,7 +40,7 @@
     "mkdirp": "^0.5.1",
     "object-merge": "^2.5.1",
     "remove-html-extension": "0.0.1",
-    "remove-markdown-extension": "0.0.1"
+    "remove-markdown-extension": "^1.0.0"
   },
   "devDependencies": {
     "tap-dot": "^1.0.0",
